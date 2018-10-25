@@ -16,7 +16,7 @@
   <section class="conteneur">
     <section class="sousconteneur">
       <div>
-        <img src="" alt="image1">
+        <img src="../data/1m1c.jpg" alt="image1">
         <p>Categorie 1</p>
       </div>
       <div>
