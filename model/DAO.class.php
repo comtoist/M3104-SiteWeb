@@ -2,6 +2,7 @@
 
     require_once("../model/Categorie.class.php");
     require_once("../model/Article.class.php");
+    require_once("../model/Lieu.class.php");
 
     // Creation de l'unique objet DAO
     $dao = new DAO();
@@ -12,7 +13,7 @@
         // L'objet local PDO de la base de donnée
         private $db;
         // Le type, le chemin et le nom de la base de donnée
-        private $database = 'sqlite:../data/db/bricomachin.db';
+        private $database = 'sqlite:../data/db/projet.db';
 
         // Constructeur chargé d'ouvrir la BD
         function __construct() {
@@ -115,6 +116,18 @@
             return $arr;
         }
 
+        // Acces à un lieu
+        // Retourne un objet de la classe Lieu connaissant son identifiant
+        function getLieu(int $id): Categorie {
+            ///////////////////////////////////////////////////////
+            //  A COMPLETER
+            ///////////////////////////////////////////////////////
+            $req = "SELECT * FROM Lieu WHERE id ='$id' ";
+            $resR=($this->db)->query($req);
+
+            $arr=$resR->fetchAll(PDO::FETCH_CLASS,'Lieu');
+            return $arr;
+        }
 
 
 
