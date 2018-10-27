@@ -64,15 +64,15 @@
         // Acces au n articles à partir de la reférence $ref
         // Cette méthode retourne un tableau contenant n  articles de
         // la base sous la forme d'objets de la classe Article.
-        function getN(int $ref,int $n) : array {
+        function get(int $ref)  {
             ///////////////////////////////////////////////////////
             //  A COMPLETER
             ///////////////////////////////////////////////
-            $req = "SELECT * FROM article WHERE ref >= '$ref' ORDER by ref ASC LIMIT '$n'";
+            $req = "SELECT * FROM article WHERE libelle = $ref";
             $resR=($this->db)->query($req);
             $arr=$resR->fetchAll(PDO::FETCH_CLASS,'article');
             return $arr;
-            return array();
+
 
         }
 /*
