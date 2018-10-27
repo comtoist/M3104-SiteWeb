@@ -1,27 +1,32 @@
-<!DOCTYPE html>
-<html lang="fr" dir="ltr">
+<html>
 <head>
-  <meta charset="utf-8">
-  <title>Page-Marque</title>
-  <link rel="stylesheet" type="text/css" href="design/PageAccueil.css">
+<title>Bricomachin</title>
+<meta charset="UTF-8"/>
+<meta http-equiv="content-type" content="text/html;" />
+<meta name="author" content="Jean-Pierre Chevallet" />
+<link rel="stylesheet" type="text/css" href="../view/design/style.css">
 </head>
+
 <body>
-  <header>
-    <h1>NomSite</h1>
-    <nav>
-      <input type="text" placeholder="Search..">
-    </nav>
-  </header>
+<header>
+  <a href="javascript:history.back(-1)">
+  <img src="https://www-info.iut2.univ-grenoble-alpes.fr/intranet/enseignements/ProgWeb/M3104/TP/tp02/sujet/img/Actions-arrow-top-icon.png"/></a>
 
-  <section class="conteneur">
+<h1>Articles :</h1>
+</header>
 
-      <div>
-        <img src="" alt="image1">
-        <p>Produit 1</p>
-      </div>
 
-    </section>
 
-  <footer></footer>
+    <?php foreach ($arti as $obj => $value) {
+        ?>
+      <a href="afficherInfo.ctrl.php?id=<?php echo $value->libelle ?>">
+      <img src="../data/img/<?php echo $value->libelle ?>.jpg" width="200"/>
+      <br>
+      <p> <?php echo $value->nom_produit ?> </p>
+      <br>
+    </a>
+  <?php } ?>
+
+
 </body>
 </html>

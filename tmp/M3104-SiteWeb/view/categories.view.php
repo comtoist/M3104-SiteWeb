@@ -13,13 +13,13 @@
 <form class="" action="recherche.ctrl.php" method="get">
   <label for="Cat">Catégories :</label>
   <select class="Cat" name="cat">
-    <option value="Botte">Botte</option>
-    <option value="Mocassin">Mocassin</option>
-    <option value="Chausson">Chausson</option>
-    <option value="Rangers">Rangers</option>
-    <option value="Tong">tong</option>
-    <option value="Chaussure de sport">Chaussure de sport</option>
-    <option value="Chaussure de ville">Chaussure de ville</option>
+    <option value="1">Botte</option>
+    <option value="2">Mocassin</option>
+    <option value="3">Chausson</option>
+    <option value="4">Rangers</option>
+    <option value="5">tong</option>
+    <option value="6">Chaussure de sport</option>
+    <option value="7">Chaussure de ville</option>
   </select>
 <br>
   <label for="Lieu">Lieu disponible :</label>
@@ -56,9 +56,9 @@
   </select>
   <br>
     <label for="ChoixPrix">Prix Min:</label>
-    <input type="text" name="prixMIN" id="prixMIN">
+    <input type="number" name="prixMIN" id="prixMIN">
     <label for="ChoixPrix">Prix Max:</label>
-    <input type="text" name="prixMAX" id="prixMAX">
+    <input type="number" name="prixMAX" id="prixMAX">
     <br>
     <input type="submit"  value="valider recherche">
 </form>

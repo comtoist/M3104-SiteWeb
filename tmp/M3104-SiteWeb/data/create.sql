@@ -7,7 +7,7 @@ CREATE TABLE article (
   nom_produit TEXT,
   categorie INTEGER,
   marque TEXT,
-  prix INTEGER,
+  prix TEXT,
   photo TEXT,
   FOREIGN KEY (categorie) REFERENCES categorie(libelle)
   );

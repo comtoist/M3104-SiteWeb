@@ -126,6 +126,7 @@
             $resR=($this->db)->query($req);
 
             $arr=$resR->fetchAll(PDO::FETCH_CLASS,'lieu');
+
             return $arr;
         }
 
@@ -141,20 +142,25 @@
             $resR=($this->db)->query($req);
 
             $arr=$resR->fetchAll(PDO::FETCH_CLASS,'article');
+
             return $arr;
         }
 
-        function getChercher(string $categorie, string $lieu, string $marque, int $prixMIN, int $prixMAX)  {
+        function getChercher(string $categorie, string $lieu, string $marque, int $prixMIN, int $prixMAX) : array  {
             ///////////////////////////////////////////////////////
             //  A COMPLETER
             ///////////////////////////////////////////////////////
-            $req = "SELECT libelle, nom_produit, categorie, marque, prix, photo FROM categorie,lieu,article WHERE nom =$categorie and lieu_dispo ='$lieu' and marque ='$marque' and prix >$prixMIN and prix <$prixMAX";
+            $req = "SELECT distinct a.libelle, nom_produit, categorie, marque, prix, photo FROM lieu l,article a WHERE a.categorie  = $categorie AND a.marque ='$marque'  AND l.lieu_dispo ='$lieu' AND a.prix<'$prixMAX'";
+                //  SELECT distinct a.libelle, nom_produit, categorie, marque, prix, photo FROM lieu l,article a WHERE a.categorie = '1' AND l.lieu_dispo ='Paris' AND a.marque ='Esprit' AND a.prix >12 AND a.prix <150;
+              //    SELECT distinct a.libelle, nom_produit, categorie, marque, prix, photo FROM lieu l,article a WHERE a.categorie = '1' AND l.lieu_dispo ='Grenoble' AND a.marque ='Georgia Rose ' AND a.prix >12 AND a.prix <150;
 
 
             $resR=($this->db)->query($req);
-            
+
             $arr=$resR->fetchAll(PDO::FETCH_CLASS,'article');
+
             return $arr;
+
         }
 
     }
