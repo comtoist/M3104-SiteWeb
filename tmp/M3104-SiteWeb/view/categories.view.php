@@ -10,9 +10,9 @@
 <body>
 <header>
 <h2>Chercher un produit :</h2>
-<form class="" action="index.html" method="post">
-  <label for="ChoixCat">Catégories :</label>
-  <select class="ChoixCat" name="ChoixCat">
+<form class="" action="recherche.ctrl.php" method="get">
+  <label for="Cat">Catégories :</label>
+  <select class="Cat" name="cat">
     <option value="Botte">Botte</option>
     <option value="Mocassin">Mocassin</option>
     <option value="Chausson">Chausson</option>
@@ -22,8 +22,8 @@
     <option value="Chaussure de ville">Chaussure de ville</option>
   </select>
 <br>
-  <label for="ChoixLieu">Lieu disponible :</label>
-  <select class="ChoixLieu" name="ChoixLieu">
+  <label for="Lieu">Lieu disponible :</label>
+  <select class="Lieu" name="lieu">
     <option value="Grenoble">Grenoble</option>
     <option value="Paris">Paris</option>
     <option value="Lyon">Lyon</option>
@@ -35,7 +35,7 @@
   </select>
   <br>
   <label for="ChoixMarque">Marque :</label>
-  <select class="ChoixMarque" name="ChoixMarque">
+  <select class="ChoixMarque" name="marque">
     <option value="Clarks">Clarks</option>
     <option value="Georgia Rose">Georgia Rose</option>
     <option value="Esprit">Esprit</option>
@@ -55,12 +55,11 @@
 
   </select>
   <br>
-    <label for="ChoixPrix">Prix :</label>
-    <select class="ChoixPrix" name="ChoixPrix">
-      <option value="50">Moins de 50$</option>
-      <option value="100">Entre 50$ et 150$</option>
-      <option value="150">Plus de 150$</option>
-    </select>
+    <label for="ChoixPrix">Prix Min:</label>
+    <input type="text" name="prixMIN" id="prixMIN">
+    <label for="ChoixPrix">Prix Max:</label>
+    <input type="text" name="prixMAX" id="prixMAX">
+    <br>
     <input type="submit"  value="valider recherche">
 </form>
 </header>

@@ -142,8 +142,19 @@
 
             $arr=$resR->fetchAll(PDO::FETCH_CLASS,'article');
             return $arr;
+        }
+
+        function getChercher(string $categorie, string $lieu, string $marque, int $prixMIN, int $prixMAX)  {
+            ///////////////////////////////////////////////////////
+            //  A COMPLETER
+            ///////////////////////////////////////////////////////
+            $req = "SELECT libelle, nom_produit, categorie, marque, prix, photo FROM categorie,lieu,article WHERE nom =$categorie and lieu_dispo ='$lieu' and marque ='$marque' and prix >$prixMIN and prix <$prixMAX";
 
 
+            $resR=($this->db)->query($req);
+            
+            $arr=$resR->fetchAll(PDO::FETCH_CLASS,'article');
+            return $arr;
         }
 
     }
