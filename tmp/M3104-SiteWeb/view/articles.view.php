@@ -9,16 +9,16 @@
 
 <body>
 <header>
-<h1>Catégories :</h1>
+<h1>Articles :</h1>
 </header>
 
 
 
-    <?php foreach ($categorie as $obj => $value) { ?>
+    <?php foreach ($article as $obj => $value) { ?>
       <a href="afficherArticles.ctrl.php?cat=<?php echo $value->libelle ?>">
-      <img src="../data/img/<?php echo $value->nom ?>.jpg" width="200"/>
+      <img src="../data/img/<?php echo $value->libelle ?>.jpg" width="200"/>
       <br>
-      <p> <?php echo $value->nom ?> </p>
+      <p> <?php echo $value->nom_produit ?> </p>
       <br>
     </a>
     <?php } ?>

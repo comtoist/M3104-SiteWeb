@@ -118,7 +118,7 @@
 
         // Acces à un lieu
         // Retourne un objet de la classe Lieu connaissant son identifiant
-        function getLieu(int $id): categorie {
+        function getLieu(int $id): lieu {
             ///////////////////////////////////////////////////////
             //  A COMPLETER
             ///////////////////////////////////////////////////////
@@ -133,13 +133,17 @@
 
         // Acces au n articles à partir de la reférence $ref
         // Retourne une table d'objets de la classe Article
-        function getNCateg(int $ref,int $n,string $categorie) : array {
+        function getNCateg(int $categorie) : array {
             ///////////////////////////////////////////////////////
             //  A COMPLETER
             ///////////////////////////////////////////////////////
+            $req = "SELECT * FROM article WHERE categorie ='$categorie' ";
+            $resR=($this->db)->query($req);
+
+            $arr=$resR->fetchAll(PDO::FETCH_CLASS,'article');
+            return $arr;
 
 
-            return array();
         }
 
     }

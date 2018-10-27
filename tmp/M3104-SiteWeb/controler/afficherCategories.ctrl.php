@@ -19,4 +19,4 @@ $categorie = $dao->getAllCat();
   $error = 'afficherCategories.ctrl.php : Pas de données pour les categories';
 }
   ?>
- 
+  
