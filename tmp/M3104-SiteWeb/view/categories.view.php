@@ -9,9 +9,22 @@
 
 <body>
 <header>
-<h1>Catégories :</h1>
-</header>
+<h2>Chercher un produit :</h2>
+<form class="" action="index.html" method="post">
+  <label for="Choix">Catégories :</label>
+  <select class="Choix" name="Choix">
+    <option value="Botte">Botte</option>
+    <option value="Mocassin">Mocassin</option>
+    <option value="Chausson">Chausson</option>
+    <option value="Rangers">Rangers</option>
+    <option value="Tong">tong</option>
+    <option value="Chaussure de sport">Chaussure de sport</option>
+    <option value="Chaussure de ville">Chaussure de ville</option>
 
+  </select>
+</form>
+</header>
+<h1>Catégories :</h1>
 
 
     <?php foreach ($categorie as $obj => $value) { ?>

@@ -8,9 +8,9 @@
     //  A COMPLETER
     ///////////////////////////////////////////////
 
-    global $article;
-    $art = $dao->get($id);
 
+    $art = $dao->get($id);
+    $dispo = $dao->getLieu($id);
     include('../view/info.view.php');
 
     ?>

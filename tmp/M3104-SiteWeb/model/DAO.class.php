@@ -118,11 +118,11 @@
 
         // Acces à un lieu
         // Retourne un objet de la classe Lieu connaissant son identifiant
-        function getLieu(int $id): lieu {
+        function getLieu(int $id) {
             ///////////////////////////////////////////////////////
             //  A COMPLETER
             ///////////////////////////////////////////////////////
-            $req = "SELECT * FROM lieu WHERE id ='$id' ";
+            $req = "SELECT * FROM lieu WHERE article =$id ";
             $resR=($this->db)->query($req);
 
             $arr=$resR->fetchAll(PDO::FETCH_CLASS,'lieu');
