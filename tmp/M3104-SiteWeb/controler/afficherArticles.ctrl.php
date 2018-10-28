@@ -11,7 +11,6 @@
     global $article;
     $article = $dao->getNCateg($cat);
     if (isset($categorie)) {
-
     // On charge la vue
     include('../view/article.view.php');
     }else {
