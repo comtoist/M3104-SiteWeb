@@ -1,3 +1,3 @@
 <?php
-header('Location: ../view/PageAccueil.view.php');
+header('Location: controler/afficherArticles.ctrl.php');
 ?>
