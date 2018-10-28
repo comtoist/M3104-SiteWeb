@@ -8,6 +8,8 @@
 
 <body>
   <header>
+    <h1>Shopper</h1>
+    <h2>Les chaussures à petit prix !</h2>
     <form class="" action="recherche.ctrl.php" method="get">
       <label for="Cat">Catégories :</label>
       <select class="Cat" name="cat">
@@ -52,10 +54,12 @@
         <option value="Pier One">Pier One</option>
 
       </select>
+    </br>
       <label for="ChoixPrix">Prix Min:</label>
       <input type="number" name="prixMIN" id="prixMIN">
       <label for="ChoixPrix">Prix Max:</label>
       <input type="number" name="prixMAX" id="prixMAX">
+    </br>
       <input type="submit"  value="valider recherche">
     </form>
   </header>

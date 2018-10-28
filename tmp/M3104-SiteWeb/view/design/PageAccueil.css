@@ -9,8 +9,12 @@ a {
   text-decoration: none;
   text-align: center;
 }
-input{
-  width: 75%;
+
+header {
+  text-align: center;
+}
+header>form{
+  background-color: lightgrey;
 }
 
 .sousconteneur{
