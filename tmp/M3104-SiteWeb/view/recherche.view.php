@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Bricomachin</title>
+<title>Shopper</title>
 <meta charset="UTF-8"/>
 <meta http-equiv="content-type" content="text/html;" />
 <meta name="author" content="Jean-Pierre Chevallet" />

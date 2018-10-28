@@ -4,10 +4,11 @@ html{
   background: url("https://i.pinimg.com/originals/8e/bb/73/8ebb73accef425c9d6919d36eadf8cc9.jpg") no-repeat center center fixed;
   background-size: cover;
 }
-header {
+
+a {
+  text-decoration: none;
   text-align: center;
 }
-
 input{
   width: 75%;
 }
