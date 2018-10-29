@@ -1,9 +1,9 @@
- <?php
+<?php
 
-    class Categorie {
-        public $id;  
-        public $nom;
-    }
+class Categorie {
+  public $id;
+  public $nom;
+}
 
 
 ?>

@@ -5,8 +5,6 @@
         public $categorie;
         public $marque;
         public $prix;
-        public $image;
-
-        
+        public $image;    
     }
 ?>
