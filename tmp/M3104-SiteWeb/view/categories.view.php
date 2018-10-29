@@ -1,9 +1,9 @@
 <html>
 <head>
-  <title>Shopper</title>
+  <title>Shopper|Accueil</title>
   <meta charset="UTF-8"/>
   <meta http-equiv="content-type" content="text/html;" />
-  <link rel="stylesheet" type="text/css" href="../view/design/PageAccueil.css">
+  <link rel="stylesheet" type="text/css" href="../view/design/categoriesview.css">
 </head>
 
 <body>
@@ -55,51 +55,51 @@
 
       </select>
     </br>
-      <label for="ChoixPrix">Prix Min:</label>
-      <input type="number" name="prixMIN" id="prixMIN">
-      <label for="ChoixPrix">Prix Max:</label>
-      <input type="number" name="prixMAX" id="prixMAX">
-    </br>
-      <input type="submit"  value="valider recherche">
-    </form>
-  </header>
-  <section class="conteneur">
-    <section class="sousconteneur">
-      <?php foreach ($categorie1 as $obj => $value) { ?>
-        <div>
-          <a href="afficherArticles.ctrl.php?cat=<?php echo $value->libelle ?>">
-            <img src="../data/img/<?php echo $value->nom ?>.jpg" width="200px" height="200px"/>
-            <br>
-            <p> <?php echo $value->nom ?> </p>
-            <br>
-          </a>
-        </div>
-      <?php } ?>
-    </section>
-    <section class="sousconteneur">
-      <?php foreach ($categorie2 as $obj => $value) { ?>
-        <div>
-          <a href="afficherArticles.ctrl.php?cat=<?php echo $value->libelle ?>">
-            <img src="../data/img/<?php echo $value->nom ?>.jpg" width="200px" height="200px"/>
-            <br>
-            <p> <?php echo $value->nom ?> </p>
-            <br>
-          </a>
-        </div>
-      <?php } ?>
-    </section>
-    <section class="sousconteneur">
-      <?php foreach ($categorie3 as $obj => $value) { ?>
-        <div>
-          <a href="afficherArticles.ctrl.php?cat=<?php echo $value->libelle ?>">
-            <img src="../data/img/<?php echo $value->nom ?>.jpg"width="200px" height="200px"/>
-            <br>
-            <p> <?php echo $value->nom ?> </p>
-            <br>
-          </a>
-        </div>
-      <?php } ?>
-    </section>
+    <label for="ChoixPrix">Prix Min:</label>
+    <input type="number" name="prixMIN" id="prixMIN">
+    <label for="ChoixPrix">Prix Max:</label>
+    <input type="number" name="prixMAX" id="prixMAX">
+  </br>
+  <input type="submit"  value="valider recherche">
+</form>
+</header>
+<section class="conteneur">
+  <section class="sousconteneur">
+    <?php foreach ($categorie1 as $obj => $value) { ?>
+      <article>
+        <a href="afficherArticles.ctrl.php?cat=<?php echo $value->libelle ?>">
+          <img src="../data/img/<?php echo $value->nom ?>.jpg" width="200px" height="200px"/>
+          <br>
+          <p> <?php echo $value->nom ?> </p>
+          <br>
+        </a>
+      </article>
+    <?php } ?>
   </section>
+  <section class="sousconteneur">
+    <?php foreach ($categorie2 as $obj => $value) { ?>
+      <article>
+        <a href="afficherArticles.ctrl.php?cat=<?php echo $value->libelle ?>">
+          <img src="../data/img/<?php echo $value->nom ?>.jpg" width="200px" height="200px"/>
+          <br>
+          <p> <?php echo $value->nom ?> </p>
+          <br>
+        </a>
+      </article>
+    <?php } ?>
+  </section>
+  <section class="sousconteneur">
+    <?php foreach ($categorie3 as $obj => $value) { ?>
+      <article>
+        <a href="afficherArticles.ctrl.php?cat=<?php echo $value->libelle ?>">
+          <img src="../data/img/<?php echo $value->nom ?>.jpg"width="200px" height="200px"/>
+          <br>
+          <p> <?php echo $value->nom ?> </p>
+          <br>
+        </a>
+      </article>
+    <?php } ?>
+  </section>
+</section>
 </body>
 </html>
