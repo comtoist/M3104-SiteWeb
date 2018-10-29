@@ -15,7 +15,7 @@
       <?php foreach ($arti as $obj => $value) {?>
         <article>
           <a href="afficherInfo.ctrl.php?id=<?php echo $value->libelle ?>">
-            <img src="../data/img/<?php echo $value->libelle ?>.jpg" width="200px" height="200px"/>
+            <img src="../data/img/<?php echo $value->libelle ?>.png" width="200px" height="200px"/>
             <p> <?php echo $value->nom_produit ?> </p>
           </a>
         </article>

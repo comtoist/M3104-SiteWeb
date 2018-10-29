@@ -68,7 +68,7 @@
     <?php foreach ($categorie1 as $obj => $value) { ?>
       <article>
         <a href="afficherArticles.ctrl.php?cat=<?php echo $value->libelle ?>">
-          <img src="../data/img/<?php echo $value->nom ?>.jpg" width="200px" height="200px"/>
+          <img src="../data/img/<?php echo $value->nom ?>.png" width="200px" height="200px"/>
           <br>
           <p> <?php echo $value->nom ?> </p>
           <br>
@@ -80,7 +80,7 @@
     <?php foreach ($categorie2 as $obj => $value) { ?>
       <article>
         <a href="afficherArticles.ctrl.php?cat=<?php echo $value->libelle ?>">
-          <img src="../data/img/<?php echo $value->nom ?>.jpg" width="200px" height="200px"/>
+          <img src="../data/img/<?php echo $value->nom ?>.png" width="200px" height="200px"/>
           <br>
           <p> <?php echo $value->nom ?> </p>
           <br>
@@ -92,7 +92,7 @@
     <?php foreach ($categorie3 as $obj => $value) { ?>
       <article>
         <a href="afficherArticles.ctrl.php?cat=<?php echo $value->libelle ?>">
-          <img src="../data/img/<?php echo $value->nom ?>.jpg"width="200px" height="200px"/>
+          <img src="../data/img/<?php echo $value->nom ?>.png" width="200px" height="200px"/>
           <br>
           <p> <?php echo $value->nom ?> </p>
           <br>

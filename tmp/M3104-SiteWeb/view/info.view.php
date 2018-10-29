@@ -17,7 +17,7 @@
 
       <?php foreach ($art as $obj => $value) { ?>
         <article>
-          <img src="../data/img/<?php echo $value->libelle ?>.jpg"  width="200px" height="200px"/>
+          <img src="../data/img/<?php echo $value->libelle ?>.png"  width="200px" height="200px"/>
           <br>
           <div>
             <p><strong>Nom Produit :</strong> <?php echo $value->nom_produit ?> </p>
