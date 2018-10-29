@@ -140,17 +140,14 @@
             ///////////////////////////////////////////////////////
             $req = "SELECT * FROM article WHERE categorie ='$categorie' ";
             $resR=($this->db)->query($req);
-
             $arr=$resR->fetchAll(PDO::FETCH_CLASS,'article');
 
             return $arr;
         }
 
         function getChercher(string $categorie, string $lieu, string $marque, int $prixMIN, int $prixMAX) : array  {
-            ///////////////////////////////////////////////////////
-            //  A COMPLETER
-            ///////////////////////////////////////////////////////
-            $req = "SELECT distinct a.libelle, nom_produit, categorie, marque, prix, photo FROM lieu l,article a WHERE a.categorie  = $categorie AND a.marque ='$marque'  AND l.lieu_dispo ='$lieu' AND a.prix<'$prixMAX'";
+
+            $req = "SELECT distinct a.libelle, nom_produit, categorie, marque, prix, photo FROM lieu l,article a WHERE a.categorie  = $categorie AND a.marque ='$marque'  AND a.libelle=l.article";
                 //  SELECT distinct a.libelle, nom_produit, categorie, marque, prix, photo FROM lieu l,article a WHERE a.categorie = '1' AND l.lieu_dispo ='Paris' AND a.marque ='Esprit' AND a.prix >12 AND a.prix <150;
               //    SELECT distinct a.libelle, nom_produit, categorie, marque, prix, photo FROM lieu l,article a WHERE a.categorie = '1' AND l.lieu_dispo ='Grenoble' AND a.marque ='Georgia Rose ' AND a.prix >12 AND a.prix <150;
 
@@ -160,9 +157,7 @@
             $arr=$resR->fetchAll(PDO::FETCH_CLASS,'article');
 
             return $arr;
-
         }
-
     }
 
     ?>
