@@ -4,21 +4,15 @@ html{
   background: url("https://i.pinimg.com/originals/8e/bb/73/8ebb73accef425c9d6919d36eadf8cc9.jpg") no-repeat center center fixed;
   background-size: cover;
 }
-
-a {
-  text-decoration: none;
+header> h1{
   text-align: center;
 }
 
-header {
-  text-align: center;
-}
-header>form{
-  background-color: lightgrey;
-}
-
-.sousconteneur{
+article{
   display: flex;
-  align-content:flex-end;
-  justify-content: space-around;
+  justify-content:center;
+}
+article>div {
+  height: 200px;
+  width: 300px;
 }
