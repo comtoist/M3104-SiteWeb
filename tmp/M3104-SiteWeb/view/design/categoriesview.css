@@ -17,6 +17,12 @@ form>label{
   font-size: 14px;
 }
 
+input[type=number] {
+  height:20px;
+  appearance: textfield;
+  margin: 0;
+}
+
 .sousconteneur{
   display: flex;
   align-content:flex-end;
