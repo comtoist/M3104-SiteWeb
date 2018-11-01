@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
   <title>Shopper|InformationsProduit</title>
@@ -9,7 +10,7 @@
 <body>
   <header>
     <a href="javascript:history.back(-1)">
-      <img src="https://www-info.iut2.univ-grenoble-alpes.fr/intranet/enseignements/ProgWeb/M3104/TP/tp02/sujet/img/Actions-arrow-top-icon.png"/></a>
+            <img src="https://png.icons8.com/metro/1600/circled-left.png"width="50px" height="50px"/></a>
       <h1>Produit sélectionné</h1>
     </header>
 
