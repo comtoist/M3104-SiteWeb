@@ -6,7 +6,7 @@ include_once("../model/DAO.class.php");
 
 global $categorie;
 
-$categorie = $dao->getAllCat();//on récuperer les catégories
+$categorie = $dao->getAllCat();//on récupere les catégories
 $categorie1=array_slice($categorie,0,3);//On recupere les 3 premiers elements
 $categorie2=array_slice($categorie,3,3);//On recupere les 3 suivants elements
 $categorie3=array_slice($categorie,6,6);//On recupere le dernier element
