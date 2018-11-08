@@ -17,3 +17,4 @@ if (isset($categorie)) {
 // Charge la vue
 include("../view/articles.view.php")
 ?>
+ 

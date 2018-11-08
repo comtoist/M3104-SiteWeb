@@ -10,4 +10,4 @@ $art = $dao->get($id);
 $dispo = $dao->getLieu($id);
 include('../view/info.view.php');
 
-?>
+?> 

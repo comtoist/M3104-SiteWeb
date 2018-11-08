@@ -8,7 +8,6 @@ $lieu = $_GET['lieu'];
 $marque = $_GET['marque'];
 $prixMIN = (int) $_GET['prixMIN'];
 $prixMAX = (int) $_GET['prixMAX'];
-
 global $arti;
 $arti = $dao->getChercher($cat,$lieu,$marque,$prixMIN,$prixMAX);
 if (($arti)!=null) {

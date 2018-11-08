@@ -19,4 +19,4 @@ if (isset($categorie1,$categorie2,$categorie3)) {
   // C'est une erreur : on doit toujours avoir un nom
   $error = 'afficherCategories.ctrl.php : Pas de données pour les categories';
 }
-?>
+?> 

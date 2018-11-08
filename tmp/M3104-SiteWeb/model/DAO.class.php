@@ -39,19 +39,6 @@ class DAO {
   }
 
 
-
-  // Accès aux n premiers articles
-  // Cette méthode retourne un tableau contenant les n permier articles de
-  // la base sous la forme d'objets de la classe Article.
-  function firstN(int $n) : array {
-    $req = "SELECT * FROM article LIMIT '$n'";
-    $resR=($this->db)->query($req);
-
-    $arr=$resR->fetchAll(PDO::FETCH_CLASS,'article');
-    return $arr;
-    return array();
-  }
-
   // Acces au n articles à partir de la reférence $ref
   // Cette méthode retourne un tableau contenant n  articles de
   // la base sous la forme d'objets de la classe Article.
@@ -64,26 +51,6 @@ class DAO {
 
   }
 
-// Acces aux n articles qui précèdent de $n la référence $ref dans l'ordre des références
-function prevN(int $ref,int $n): array {
-  $req = "SELECT * FROM (SELECT * FROM article WHERE ref < '$ref' ORDER by ref desC LIMIT '$n' ) ORDER BY ref ASC";
-  $resR=($this->db)->query($req);
-  $arr=$resR->fetchAll(PDO::FETCH_CLASS,'article');
-  return $arr;
-  return array();
-}
-
-
-
-// Acces à une catégorie
-// Retourne un objet de la classe Categorie connaissant son identifiant
-function getCat(int $id): categorie {
-  $req = "SELECT * FROM categorie WHERE id ='$id' ";
-  $resR=($this->db)->query($req);
-
-  $arr=$resR->fetchAll(PDO::FETCH_CLASS,'categorie');
-  return $arr;
-}
 
 // Acces à un lieu
 // Retourne un objet de la classe Lieu connaissant son identifiant
@@ -110,10 +77,7 @@ function getNCateg(int $categorie) : array {
 
 function getChercher(string $categorie, string $lieu, string $marque, int $prixMIN, int $prixMAX) : array  {
 
-  $req = "SELECT distinct a.libelle, nom_produit, categorie, marque, prix, photo FROM lieu l,article a WHERE a.categorie  = $categorie AND a.marque ='$marque'  AND a.libelle=l.article";
-  //  SELECT distinct a.libelle, nom_produit, categorie, marque, prix, photo FROM lieu l,article a WHERE a.categorie = '1' AND l.lieu_dispo ='Paris' AND a.marque ='Esprit' AND a.prix >12 AND a.prix <150;
-  //    SELECT distinct a.libelle, nom_produit, categorie, marque, prix, photo FROM lieu l,article a WHERE a.categorie = '1' AND l.lieu_dispo ='Grenoble' AND a.marque ='Georgia Rose ' AND a.prix >12 AND a.prix <150;
-
+  $req = "SELECT distinct a.libelle, nom_produit, categorie, marque, prix, photo FROM lieu l,article a WHERE a.categorie  = $categorie AND a.marque ='$marque'  AND l.lieu_dispo ='$lieu' AND a.prix<$prixMAX AND a.prix>$prixMIN";
 
   $resR=($this->db)->query($req);
   $arr=$resR->fetchAll(PDO::FETCH_CLASS,'article');
