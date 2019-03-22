@@ -1,7 +1,0 @@
-1|Botte
-2|Mocassin
-3|Chausson
-4|Rangers
-5|Tong
-6|Chaussure de sport
-7|Chaussure de ville
